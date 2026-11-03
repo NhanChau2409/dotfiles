@@ -1,4 +1,4 @@
-// Dracula palette: background, current line, foreground, cyan, purple, pink.
+// Dracula palette.
 #let bg = rgb("#282a36")
 #let panel = rgb("#383a4a")
 #let ink = rgb("#f8f8f2")
@@ -6,53 +6,31 @@
 #let cyan = rgb("#8be9fd")
 #let violet = rgb("#bd93f9")
 
-#set page(paper: "a4", margin: (x: 20mm, y: 17mm), fill: bg)
+#set page(width: 170mm, height: 140mm, margin: 13mm, fill: bg)
 #set text(font: "Helvetica Neue", size: 9pt, fill: ink)
-#set par(leading: 0.55em)
 
 #let key(label) = box(fill: rgb("#44475a"), radius: 4pt, inset: (x: 7pt, y: 4pt))[
   #text(font: "Helvetica Neue", size: 9pt, weight: "bold", fill: cyan)[#label]
 ]
 #let line(keys, action) = block(width: 100%, fill: panel, radius: 6pt, inset: (x: 10pt, y: 7pt), above: 2pt, below: 2pt)[
-  #grid(columns: (190pt, 1fr), column-gutter: 12pt, align: horizon, key(keys), [#action])
+  #grid(columns: (145pt, 1fr), column-gutter: 12pt, align: horizon, key(keys), [#action])
 ]
-#let section(label) = {
-  v(11pt)
-  text(size: 9pt, weight: "bold", fill: violet)[#label]
-  v(4pt)
-}
 
-#text(font: "JetBrains Mono", size: 8pt, fill: rgb("#ff79c6"))[DOTFILES  /  QUICK REFERENCE]
-#v(8pt)
-#text(size: 26pt, weight: "bold")[Keyboard & CLI]
+#text(font: "JetBrains Mono", size: 8pt, fill: rgb("#ff79c6"))[DOTFILES  /  KEYBOARD]
+#v(6pt)
+#text(size: 25pt, weight: "bold")[Karabiner]
 #v(3pt)
-#text(size: 9pt, fill: muted)[Bindings in this repo · ⌥ Option · ⌃ Control · ⇧ Shift · ⌘ Command]
+#text(size: 9pt, fill: muted)[Tap for one key; hold for a modifier.]
 #v(11pt)
 #rect(width: 100%, height: 1pt, fill: rgb("#6272a4"))
+#v(10pt)
+#text(size: 9pt, weight: "bold", fill: violet)[KEY REMAPS]
+#v(5pt)
+#line("⇪ Caps Lock", "Tap → ⎋ Escape   ·   Hold → left ⌘ Command")
+#line("Right ⇧ Shift", "Tap → ⌃ + B   ·   Hold → right ⌘ Command")
+#line("Left ⇧ Shift", "Tap → ⌫ Delete   ·   Hold → left ⇧ Shift")
 
-#section("01  AEROSPACE  /  WINDOWS")
-#line("⌥ + H / J / K / L", "Focus window  ←  ↓  ↑  →")
-#line("⌥ + ⇧ + H / L", "Focus monitor  ←  →")
-#line("⌃ + ⌥ + ⇧ + H / L", "Move window to monitor  ←  →")
-
-#section("02  KARABINER  /  REMAPS")
-#line("⇪ Caps Lock · tap / hold", "⎋ Escape / left ⌘ Command")
-#line("Right ⇧ · tap / hold", "⌃ + B / right ⌘ Command")
-#line("Left ⇧ · tap / hold", "⌫ Delete / left ⇧ Shift")
-
-#section("03  ZSH  /  ALIASES & HISTORY")
-#line("ls  ·  ll  ·  la  ·  tree", "eza listings; long / hidden / tree")
-#line("cat", "bat without paging (when installed)")
-#line("grep  ·  diff", "Colored output when supported")
-#line("↑  /  ↓", "Search history matching typed prefix")
-
-#section("04  EDITOR & PROMPT")
-#line("Neovim", "LazyVim defaults; no extra active keymaps")
-#line("Starship", "Shell prompt; basic Zsh fallback")
-
-#v(14pt)
+#v(13pt)
 #rect(width: 100%, height: 1pt, fill: rgb("#6272a4"))
 #v(8pt)
-#text(size: 8pt, fill: muted)[EDIT IN  #text(font: "JetBrains Mono", fill: cyan)[config/aerospace · config/karabiner · config/zsh · config/nvim]]
-#v(3pt)
-#text(size: 8pt, fill: muted)[AeroSpace requires installation; after Stow links configs, both paths refer to the same file.]
+#text(size: 8pt, fill: muted)[EDIT  #text(font: "JetBrains Mono", fill: cyan)[config/karabiner/karabiner.json]]
