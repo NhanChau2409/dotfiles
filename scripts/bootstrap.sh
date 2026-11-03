@@ -71,4 +71,4 @@ if ! pi list 2>/dev/null | grep -Fq 'git:github.com/NhanChau2409/pi-workbench@v0
   pi install git:github.com/NhanChau2409/pi-workbench@v0.5.1
 fi
 
-echo "Ready. Restart Pi to load its package; open Karabiner/AeroSpace to grant macOS permissions."
+echo "Ready. Restart Pi to load its package; open Karabiner to grant macOS permissions."

@@ -24,7 +24,6 @@ brew "stow"
 brew "tmux"
 brew "typst"
 
-cask "aerospace"
 cask "brave-browser"
 cask "caffeine"
 cask "font-jetbrains-mono"

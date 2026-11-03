@@ -12,7 +12,6 @@ Pi manages its own settings; the bootstrap installs the pinned [pi-workbench](ht
 
 | Repo | Home |
 | --- | --- |
-| `config/aerospace/aerospace.toml` | `~/.config/aerospace/aerospace.toml` |
 | `config/ghostty/config.ghostty` | `~/.config/ghostty/config.ghostty` |
 | `config/herdr/config.toml` | `~/.config/herdr/config.toml` |
 | `config/karabiner/karabiner.json` | `~/.config/karabiner/karabiner.json` |
