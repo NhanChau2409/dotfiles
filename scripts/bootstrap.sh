@@ -31,6 +31,16 @@ brew bundle install --file "$ROOT/Brewfile" --no-upgrade
 # Prevent Stow from folding entire config directories into symlinks: apps may
 # generate runtime state beside their settings. Existing files are backed up.
 backup="$HOME/.dotfiles-backup/$(date +%Y%m%d-%H%M%S)-$$"
+# Ghostty loads the old `config` name and macOS Application Support after
+# ~/.config/ghostty/config.ghostty; retire them so they cannot override it.
+for legacy_ghostty in "$HOME/.config/ghostty/config" "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty"; do
+  if [[ -e "$legacy_ghostty" || -L "$legacy_ghostty" ]]; then
+    destination="$backup/${legacy_ghostty#"$HOME/"}"
+    mkdir -p "$(dirname "$destination")"
+    mv "$legacy_ghostty" "$destination"
+    echo "Backed up $legacy_ghostty -> $destination"
+  fi
+done
 for package in config home; do
   if [[ "$package" == config ]]; then target_root="$HOME/.config"; else target_root="$HOME"; fi
   while IFS= read -r -d '' source; do

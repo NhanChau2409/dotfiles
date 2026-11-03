@@ -4,7 +4,7 @@ Homebrew installs tools; GNU Stow links curated settings into place. Review the 
 
 ## Layout
 
-`config/` mirrors `~/.config/`; `home/` mirrors other paths under `~/`, so editing a linked config updates the file in this repo. `pi-settings.example.json` seeds new Pi installs only; Pi plugins live in [pi-workbench](https://github.com/NhanChau2409/pi-workbench), while credentials, caches, history, and machine-specific state stay out of Git.
+`config/` mirrors `~/.config/` (including Ghostty); `home/` mirrors other paths under `~/`, so editing a linked config updates the file in this repo. `pi-settings.example.json` seeds new Pi installs only; Pi plugins live in [pi-workbench](https://github.com/NhanChau2409/pi-workbench), while credentials, caches, history, and machine-specific state stay out of Git.
 
 ## Add a tool
 
@@ -14,4 +14,4 @@ Add its Homebrew formula/cask to `Brewfile` if applicable, and put only safe, st
 
 [Open the PDF](docs/cheatsheet.pdf) · [Edit the Typst source](cheatsheet.typ)
 
-[![Keyboard mappings and shell aliases cheatsheet](docs/cheatsheet.png)](docs/cheatsheet.pdf)
+[![Karabiner keyboard remaps cheatsheet](docs/cheatsheet.png)](docs/cheatsheet.pdf)
