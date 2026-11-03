@@ -1,15 +1,16 @@
-#let bg = rgb("#0b1220")
-#let panel = rgb("#172235")
-#let ink = rgb("#e2e8f0")
-#let muted = rgb("#95a6bc")
-#let cyan = rgb("#67e8f9")
-#let violet = rgb("#c4b5fd")
+// Dracula palette: background, current line, foreground, cyan, purple, pink.
+#let bg = rgb("#282a36")
+#let panel = rgb("#383a4a")
+#let ink = rgb("#f8f8f2")
+#let muted = rgb("#b8bfd9")
+#let cyan = rgb("#8be9fd")
+#let violet = rgb("#bd93f9")
 
 #set page(paper: "a4", margin: (x: 20mm, y: 17mm), fill: bg)
 #set text(font: "Helvetica Neue", size: 9pt, fill: ink)
 #set par(leading: 0.55em)
 
-#let key(label) = box(fill: rgb("#233b50"), radius: 4pt, inset: (x: 7pt, y: 4pt))[
+#let key(label) = box(fill: rgb("#44475a"), radius: 4pt, inset: (x: 7pt, y: 4pt))[
   #text(font: "JetBrains Mono", size: 8.1pt, weight: "bold", fill: cyan)[#label]
 ]
 #let line(keys, action) = block(width: 100%, fill: panel, radius: 6pt, inset: (x: 10pt, y: 7pt), above: 2pt, below: 2pt)[
@@ -21,13 +22,13 @@
   v(4pt)
 }
 
-#text(font: "JetBrains Mono", size: 8pt, fill: cyan)[DOTFILES  /  QUICK REFERENCE]
+#text(font: "JetBrains Mono", size: 8pt, fill: rgb("#ff79c6"))[DOTFILES  /  QUICK REFERENCE]
 #v(8pt)
 #text(size: 26pt, weight: "bold")[Keyboard & CLI]
 #v(3pt)
 #text(size: 9pt, fill: muted)[Bindings in this repo · Option = Alt · Control = Ctrl]
 #v(11pt)
-#rect(width: 100%, height: 1pt, fill: rgb("#314255"))
+#rect(width: 100%, height: 1pt, fill: rgb("#6272a4"))
 
 #section("01  AEROSPACE  /  WINDOWS")
 #line("Alt + H / J / K / L", "Focus window  ←  ↓  ↑  →")
@@ -50,7 +51,7 @@
 #line("Starship", "Shell prompt; basic Zsh fallback")
 
 #v(14pt)
-#rect(width: 100%, height: 1pt, fill: rgb("#314255"))
+#rect(width: 100%, height: 1pt, fill: rgb("#6272a4"))
 #v(8pt)
 #text(size: 8pt, fill: muted)[EDIT IN  #text(font: "JetBrains Mono", fill: cyan)[config/aerospace · config/karabiner · config/zsh · config/nvim]]
 #v(3pt)
