@@ -11,7 +11,7 @@
 #set par(leading: 0.55em)
 
 #let key(label) = box(fill: rgb("#44475a"), radius: 4pt, inset: (x: 7pt, y: 4pt))[
-  #text(font: "JetBrains Mono", size: 8.1pt, weight: "bold", fill: cyan)[#label]
+  #text(font: "Helvetica Neue", size: 9pt, weight: "bold", fill: cyan)[#label]
 ]
 #let line(keys, action) = block(width: 100%, fill: panel, radius: 6pt, inset: (x: 10pt, y: 7pt), above: 2pt, below: 2pt)[
   #grid(columns: (190pt, 1fr), column-gutter: 12pt, align: horizon, key(keys), [#action])
@@ -26,19 +26,19 @@
 #v(8pt)
 #text(size: 26pt, weight: "bold")[Keyboard & CLI]
 #v(3pt)
-#text(size: 9pt, fill: muted)[Bindings in this repo · Option = Alt · Control = Ctrl]
+#text(size: 9pt, fill: muted)[Bindings in this repo · ⌥ Option · ⌃ Control · ⇧ Shift · ⌘ Command]
 #v(11pt)
 #rect(width: 100%, height: 1pt, fill: rgb("#6272a4"))
 
 #section("01  AEROSPACE  /  WINDOWS")
-#line("Alt + H / J / K / L", "Focus window  ←  ↓  ↑  →")
-#line("Alt + Shift + H / L", "Focus monitor  ←  →")
-#line("Ctrl + Alt + Shift + H / L", "Move window to monitor  ←  →")
+#line("⌥ + H / J / K / L", "Focus window  ←  ↓  ↑  →")
+#line("⌥ + ⇧ + H / L", "Focus monitor  ←  →")
+#line("⌃ + ⌥ + ⇧ + H / L", "Move window to monitor  ←  →")
 
 #section("02  KARABINER  /  REMAPS")
-#line("Caps Lock  tap / hold", "Escape / left Command")
-#line("Right Shift  tap / hold", "Ctrl + B / right Command")
-#line("Left Shift  tap / hold", "Backspace / left Shift")
+#line("⇪ Caps Lock · tap / hold", "⎋ Escape / left ⌘ Command")
+#line("Right ⇧ · tap / hold", "⌃ + B / right ⌘ Command")
+#line("Left ⇧ · tap / hold", "⌫ Delete / left ⇧ Shift")
 
 #section("03  ZSH  /  ALIASES & HISTORY")
 #line("ls  ·  ll  ·  la  ·  tree", "eza listings; long / hidden / tree")
