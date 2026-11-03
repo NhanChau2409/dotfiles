@@ -4,7 +4,7 @@ Homebrew installs tools; GNU Stow links curated settings into place. Review the 
 
 ## Layout
 
-`config/` mirrors `~/.config/`; `home/` mirrors other paths under `~/`, so Stow can link settings without copies. `Brewfile` stays at the root for Homebrew's standard workflow, `scripts/` holds setup actions, and `docs/` keeps Typst source beside its PDF and preview.
+`config/` mirrors `~/.config/`; `home/` mirrors other paths under `~/`, so Stow can link settings without copies. `Brewfile` stays at the root for Homebrew's standard workflow, and `scripts/` holds setup actions.
 
 Pi manages its own settings; the bootstrap installs the pinned [pi-workbench](https://github.com/NhanChau2409/pi-workbench) package, while credentials, caches, history, and machine-specific state stay out of Git.
 
@@ -27,6 +27,10 @@ Add its Homebrew formula/cask to `Brewfile` if applicable, and put only safe, st
 
 ## Cheatsheet
 
-[Open the PDF](docs/cheatsheet.pdf) · [Edit the Typst source](docs/cheatsheet.typ)
+### Karabiner
 
-[![Karabiner keyboard remaps cheatsheet](docs/cheatsheet.png)](docs/cheatsheet.pdf)
+| Key | Tap | Hold |
+| --- | --- | --- |
+| ⇪ Caps Lock | ⎋ Escape | ⌘ Command |
+| Right ⇧ Shift | ⌃ Ctrl + B | ⌘ Command |
+| Left ⇧ Shift | ⌫ Delete | ⇧ Shift |

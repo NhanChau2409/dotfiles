@@ -22,7 +22,6 @@ brew "ripgrep"
 brew "starship"
 brew "stow"
 brew "tmux"
-brew "typst"
 
 cask "brave-browser"
 cask "caffeine"
