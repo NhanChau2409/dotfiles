@@ -1,0 +1,20 @@
+theme = Ghostty Default Style Dark
+
+font-family = JetBrains Mono
+font-size = 14
+
+window-padding-x = 12
+window-padding-y = 10
+window-padding-balance = true
+window-theme = dark
+scrollbar = never
+
+macos-titlebar-style = transparent
+macos-window-buttons = visible
+macos-window-shadow = true
+
+cursor-style = block
+cursor-style-blink = true
+
+background-opacity = 0.96
+background-blur = true

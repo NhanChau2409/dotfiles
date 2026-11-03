@@ -1,0 +1,50 @@
+add_newline = true
+palette = "ghostty_dark"
+
+format = """
+$directory$git_branch$git_status$nodejs$python$golang$rust$cmd_duration
+$character"""
+
+[palettes.ghostty_dark]
+blue = "#82a2be"
+green = "#b6bd68"
+red = "#cc6566"
+yellow = "#f0c674"
+purple = "#b294bb"
+cyan = "#8abeb7"
+white = "#eaeaea"
+
+[directory]
+style = "bold blue"
+truncation_length = 3
+truncate_to_repo = false
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+style = "bold purple"
+symbol = "git:"
+
+[git_status]
+style = "bold yellow"
+format = "[$all_status$ahead_behind]($style) "
+
+[cmd_duration]
+min_time = 1000
+format = "took [$duration]($style) "
+style = "yellow"
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[>](bold red)"
+
+[nodejs]
+format = "node [$version](green) "
+
+[python]
+format = "py [$version](yellow) "
+
+[golang]
+format = "go [$version](cyan) "
+
+[rust]
+format = "rs [$version](red) "

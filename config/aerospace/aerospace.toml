@@ -1,0 +1,20 @@
+# Starter bindings; customize to taste. AeroSpace reloads this file automatically.
+start-at-login = true
+
+[key-mapping]
+preset = "qwerty"
+
+[mode.main.binding]
+# Focus windows within the current workspace (Alt + H/J/K/L)
+alt-h = "focus --direction left"
+alt-j = "focus --direction down"
+alt-k = "focus --direction up"
+alt-l = "focus --direction right"
+
+# Focus the other monitor (Alt + Shift + H/L)
+alt-shift-h = "focus-monitor --direction left"
+alt-shift-l = "focus-monitor --direction right"
+
+# Move the focused window to the other monitor (Ctrl + Alt + Shift + H/L)
+ctrl-alt-shift-h = "move-node-to-monitor --direction left"
+ctrl-alt-shift-l = "move-node-to-monitor --direction right"

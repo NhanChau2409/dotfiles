@@ -1,0 +1,13 @@
+{
+  "theme": "dark",
+  "tuiMode": "fullscreen",
+  "fullscreenScrollbar": "always",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.5",
+  "hideThinkingBlock": false,
+  "compaction": {
+    "enabled": true,
+    "reserveTokens": 32000,
+    "keepRecentTokens": 12000
+  }
+}

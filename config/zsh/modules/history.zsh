@@ -1,0 +1,8 @@
+# Persistent interactive history
+HISTFILE="$ZSH_STATE_DIR/history"
+HISTSIZE=50000
+SAVEHIST=10000
+
+setopt APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_REDUCE_BLANKS
