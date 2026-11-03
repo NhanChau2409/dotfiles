@@ -66,12 +66,7 @@ cd "$ROOT"
 stow --no-folding --target="$HOME/.config" config
 stow --no-folding --target="$HOME" home
 
-# Pi's settings.json is writable application state: only seed a NEW install.
-# Pi manages package installation and its settings, not Stow symlinks.
-mkdir -p "$HOME/.pi/agent"
-if [[ ! -e "$HOME/.pi/agent/settings.json" ]]; then
-  cp "$ROOT/pi-settings.example.json" "$HOME/.pi/agent/settings.json"
-fi
+# Let Pi own settings.json; install only our pinned package, not local settings.
 if ! pi list 2>/dev/null | grep -Fq 'git:github.com/NhanChau2409/pi-workbench@v0.5.1'; then
   pi install git:github.com/NhanChau2409/pi-workbench@v0.5.1
 fi

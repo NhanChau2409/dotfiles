@@ -4,7 +4,23 @@ Homebrew installs tools; GNU Stow links curated settings into place. Review the 
 
 ## Layout
 
-`config/` mirrors `~/.config/` (including Ghostty); `home/` mirrors other paths under `~/`, so editing a linked config updates the file in this repo. `pi-settings.example.json` seeds new Pi installs only; Pi plugins live in [pi-workbench](https://github.com/NhanChau2409/pi-workbench), while credentials, caches, history, and machine-specific state stay out of Git.
+`config/` mirrors `~/.config/`; `home/` mirrors other paths under `~/`, so Stow can link settings without copies. `Brewfile` stays at the root for Homebrew's standard workflow, `scripts/` holds setup actions, and `docs/` keeps Typst source beside its PDF and preview.
+
+Pi manages its own settings; the bootstrap installs the pinned [pi-workbench](https://github.com/NhanChau2409/pi-workbench) package, while credentials, caches, history, and machine-specific state stay out of Git.
+
+## Config → symlink target
+
+| Repo | Home |
+| --- | --- |
+| `config/aerospace/aerospace.toml` | `~/.config/aerospace/aerospace.toml` |
+| `config/ghostty/config.ghostty` | `~/.config/ghostty/config.ghostty` |
+| `config/herdr/config.toml` | `~/.config/herdr/config.toml` |
+| `config/karabiner/karabiner.json` | `~/.config/karabiner/karabiner.json` |
+| `config/nvim/**` | `~/.config/nvim/**` |
+| `config/zsh/**` | `~/.config/zsh/**` |
+| `config/starship.toml` | `~/.config/starship.toml` |
+| `home/.pi/agent/AGENTS.md` | `~/.pi/agent/AGENTS.md` |
+| `home/.zshenv` | `~/.zshenv` |
 
 ## Add a tool
 
@@ -12,6 +28,6 @@ Add its Homebrew formula/cask to `Brewfile` if applicable, and put only safe, st
 
 ## Cheatsheet
 
-[Open the PDF](docs/cheatsheet.pdf) · [Edit the Typst source](cheatsheet.typ)
+[Open the PDF](docs/cheatsheet.pdf) · [Edit the Typst source](docs/cheatsheet.typ)
 
 [![Karabiner keyboard remaps cheatsheet](docs/cheatsheet.png)](docs/cheatsheet.pdf)
