@@ -16,6 +16,6 @@
 
 #text(size: 25pt, weight: "bold")[Karabiner]
 #v(16pt)
-#line("⇪ Caps Lock", "Tap → ⎋ Escape   ·   Hold → left ⌘ Command")
-#line("Right ⇧ Shift", "Tap → ⌃ + B   ·   Hold → right ⌘ Command")
-#line("Left ⇧ Shift", "Tap → ⌫ Delete   ·   Hold → left ⇧ Shift")
+#line("⇪ Caps Lock", "Tap → ⎋ Escape   ·   Hold → ⌘ Command")
+#line("Right ⇧ Shift", "Tap → ⌃ Ctrl + B   ·   Hold → ⌘ Command")
+#line("Left ⇧ Shift", "Tap → ⌫ Delete   ·   Hold → ⇧ Shift")
