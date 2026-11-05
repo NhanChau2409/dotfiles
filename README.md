@@ -61,12 +61,13 @@ These shortcuts are configured in Homerow’s preferences. Physically, use **Lef
 | Left Shift | Tab | Option (`⌥`) |
 | Right Shift | Delete (Backspace) | Control (`⌃`) |
 | Left Control | — | Shift (`⇧`) |
+| Tab | Tab | Shift (`⇧`) |
 
-Caps Lock, Left Shift, and Right Shift use a 150 ms tap-alone timeout. The `⌘⌃V` clipboard shortcut is a trial binding and may need a delay if Spotlight does not open before `⌘4`; holding one while pressing another key acts as its modifier without waiting 200 ms. Physical Tab, Right Control, and both physical Command keys remain unchanged. Tap Left Shift for Tab; hold Left Control and tap Left Shift for Shift+Tab. No Space or Enter remapping is configured.
+Caps Lock, Left Shift, Right Shift, and Tab use a 150 ms tap-alone timeout. Tap Tab for Tab; hold Tab as Shift. The `⌘⌃V` clipboard shortcut is a trial binding and may need a delay if Spotlight does not open before `⌘4`; holding one while pressing another key acts as its modifier without waiting 200 ms. Physical Tab, Right Control, and both physical Command keys remain unchanged. Tap Left Shift for Tab; hold Left Control and tap Left Shift for Shift+Tab. No Space or Enter remapping is configured.
 
 ### AeroSpace
 
-AeroSpace reserves a 31 px top outer gap and uses a -2 px bottom gap so tiled windows extend slightly past the bottom edge. `⌥` is available by holding physical Left Shift; `⌃` is available by holding physical Right Shift. These are all configured bindings in **main mode**:
+AeroSpace uses 8 px inner gaps between tiled windows and 8 px outer gaps around the layout. The vertical values preserve the fitting adjustments: top is `31 + 8 = 39` px (menu-bar fit plus gap), and bottom is `-2 + 8 = 6` px (bottom-edge extension plus gap). `⌥` is available by holding physical Left Shift; `⌃` is available by holding physical Right Shift. These are all configured bindings in **main mode**:
 
 | Category | Shortcut | Action |
 | --- | --- | --- |
