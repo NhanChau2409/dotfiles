@@ -50,6 +50,11 @@ These shortcuts are configured in Homerow’s preferences. Physically, use **Lef
 
 ### Karabiner
 
+| Shortcut | Action |
+| --- | --- |
+| `⌘⌃V` | Open Spotlight, then its Clipboard view (`⌘Space`, `⌘4`) |
+| `⌃H/J/K/L` (Right Control) | Left/down/up/right arrow keys |
+
 | Physical key | Tap | Hold with another key |
 | --- | --- | --- |
 | Caps Lock | Escape | Command (`⌘`) |
@@ -57,11 +62,11 @@ These shortcuts are configured in Homerow’s preferences. Physically, use **Lef
 | Right Shift | Delete (Backspace) | Control (`⌃`) |
 | Left Control | — | Shift (`⇧`) |
 
-Caps Lock, Left Shift, and Right Shift use a 150 ms tap-alone timeout; holding one while pressing another key acts as its modifier without waiting 200 ms. Physical Tab, Right Control, and both physical Command keys remain unchanged. Tap Left Shift for Tab; hold Left Control and tap Left Shift for Shift+Tab. No Space or Enter remapping is configured.
+Caps Lock, Left Shift, and Right Shift use a 150 ms tap-alone timeout. The `⌘⌃V` clipboard shortcut is a trial binding and may need a delay if Spotlight does not open before `⌘4`; holding one while pressing another key acts as its modifier without waiting 200 ms. Physical Tab, Right Control, and both physical Command keys remain unchanged. Tap Left Shift for Tab; hold Left Control and tap Left Shift for Shift+Tab. No Space or Enter remapping is configured.
 
 ### AeroSpace
 
-`⌥` is available by holding physical Left Shift; `⌃` is available by holding physical Right Shift. These are all configured bindings in **main mode**:
+AeroSpace reserves a 31 px top outer gap and uses a -2 px bottom gap so tiled windows extend slightly past the bottom edge. `⌥` is available by holding physical Left Shift; `⌃` is available by holding physical Right Shift. These are all configured bindings in **main mode**:
 
 | Category | Shortcut | Action |
 | --- | --- | --- |

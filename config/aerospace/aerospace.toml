@@ -3,6 +3,11 @@ config-version = 2
 # Keep only the numbered workspaces available when empty.
 persistent-workspaces = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
+# Keep tiled windows below the macOS menu bar.
+[gaps]
+outer.top = 31
+outer.bottom = -2
+
 [mode.main.binding]
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
