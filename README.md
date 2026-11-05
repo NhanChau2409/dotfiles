@@ -46,7 +46,7 @@ Homerow is installed through the `homerow` Homebrew cask. It is free to try, wit
 | `Shift-Return` | Right-click |
 | `Esc` | Exit Homerow |
 
-These shortcuts are configured in Homerow’s preferences. Physically, use **Left Shift + Space** for `⌥Space`; use **Left Shift + Right Control + Space** for `⌥⌃Space`. The current Karabiner profile turns held Left Shift into `⌥`, while physical Right Control remains unchanged.
+These shortcuts are configured in Homerow’s preferences. Physically, use **Left Shift + Space** for `⌥Space`; use **Left Shift + Right Shift + Space** for `⌥⌃Space`. The current Karabiner profile turns held Left Shift into `⌥` and held Right Shift into `⌃`. Reapply these settings with [`scripts/configure-homerow.sh`](scripts/configure-homerow.sh).
 
 ### Karabiner
 
