@@ -13,6 +13,7 @@ Pi manages its own settings; the bootstrap installs the pinned [pi-workbench](ht
 | Repo | Home |
 | --- | --- |
 | `config/aerospace/aerospace.toml` | `~/.config/aerospace/aerospace.toml` |
+| `config/borders/bordersrc` | `~/.config/borders/bordersrc` |
 | `config/ghostty/config.ghostty` | `~/.config/ghostty/config.ghostty` |
 | `config/herdr/config.toml` | `~/.config/herdr/config.toml` |
 | `config/karabiner/karabiner.json` | `~/.config/karabiner/karabiner.json` |
@@ -29,6 +30,17 @@ Add its Homebrew formula/cask to `Brewfile` if applicable, and put only safe, st
 ## Keeping a Mac awake
 
 The `caffeine` app is in `Brewfile`; macOS also includes `caffeinate` with no installation needed. Run `caffeinate -i pi` to prevent idle sleep while that Pi process runs—this does **not** keep Pi alive if its terminal closes, the Mac restarts, or power is lost.
+
+## First launch and permissions
+
+After bootstrap, launch each GUI tool once and approve the macOS prompts it needs:
+
+1. Open **Karabiner-Elements** and complete its keyboard/driver permission setup.
+2. Open **Homerow** and enable it in **System Settings → Privacy & Security → Accessibility**.
+3. Open **AeroSpace** and enable launch at login after confirming its configuration works.
+4. Start JankyBorders with `borders`; its managed config draws a rounded 3 px purple border around the focused window.
+
+JankyBorders startup remains explicit so its appearance can be verified before enabling it permanently. macOS permissions remain manual and are intentionally not automated by the bootstrap script.
 
 ## Cheatsheet
 
@@ -60,14 +72,15 @@ These shortcuts are configured in Homerow’s preferences. Physically, use **Lef
 | Caps Lock | Escape | Command (`⌘`) |
 | Left Shift | Tab | Option (`⌥`) |
 | Right Shift | Delete (Backspace) | Control (`⌃`) |
-| Left Control | — | Shift (`⇧`) |
+| Left Control | — | Control (`⌃`) |
+| Left Option | — | Control (`⌃`) |
 | Tab | Tab | Shift (`⇧`) |
 
 Caps Lock, Left Shift, Right Shift, and Tab use a 150 ms tap-alone timeout. Tap Tab for Tab; hold Tab as Shift. The `⌘⌃V` clipboard shortcut is a trial binding and may need a delay if Spotlight does not open before `⌘4`; holding one while pressing another key acts as its modifier without waiting 200 ms. Physical Tab, Right Control, and both physical Command keys remain unchanged. Tap Left Shift for Tab; hold Left Control and tap Left Shift for Shift+Tab. No Space or Enter remapping is configured.
 
 ### AeroSpace
 
-AeroSpace uses 8 px inner gaps between tiled windows and 8 px outer gaps around the layout. The vertical values preserve the fitting adjustments: top is `31 + 8 = 39` px (menu-bar fit plus gap), and bottom is `-2 + 8 = 6` px (bottom-edge extension plus gap). `⌥` is available by holding physical Left Shift; `⌃` is available by holding physical Right Shift. These are all configured bindings in **main mode**:
+AeroSpace uses 8 px inner gaps and 8 px outer gaps, except for a 6 px bottom gap that preserves the bottom-edge fitting adjustment. Workspace `0` is reserved for the secondary monitor (falling back to the main monitor when only one is connected), so it cannot be moved with `⌥⌃Tab`. `⌥` is available by holding physical Left Shift; `⌃` is available from physical Left Option, Left Control, or Right Shift. These are all configured bindings in **main mode**:
 
 | Category | Shortcut | Action |
 | --- | --- | --- |

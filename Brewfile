@@ -1,5 +1,6 @@
 # Curated from `brew leaves` and `brew list --cask` on this Mac.
 # Libraries and transitive dependencies are installed by Homebrew as needed.
+brew "FelixKratz/formulae/borders"
 brew "ansible"
 brew "antidote"
 brew "bat"
@@ -23,6 +24,7 @@ brew "starship"
 brew "stow"
 brew "tmux"
 
+tap "FelixKratz/formulae"
 tap "nikitabobko/tap"
 cask "nikitabobko/tap/aerospace"
 cask "brave-browser"
