@@ -11,7 +11,7 @@
                                     "key_code": "caps_lock",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "parameters": { "basic.to_if_alone_timeout_milliseconds": 200 },
+                                "parameters": { "basic.to_if_alone_timeout_milliseconds": 150 },
                                 "to": [
                                     {
                                         "key_code": "left_command",
@@ -26,7 +26,7 @@
                                     "key_code": "right_shift",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "parameters": { "basic.to_if_alone_timeout_milliseconds": 200 },
+                                "parameters": { "basic.to_if_alone_timeout_milliseconds": 150 },
                                 "to": [
                                     {
                                         "key_code": "right_control",
@@ -41,7 +41,7 @@
                                     "key_code": "left_shift",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "parameters": { "basic.to_if_alone_timeout_milliseconds": 200 },
+                                "parameters": { "basic.to_if_alone_timeout_milliseconds": 150 },
                                 "to": [
                                     {
                                         "key_code": "left_option",

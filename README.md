@@ -57,7 +57,7 @@ These shortcuts are configured in Homerow’s preferences. Physically, use **Lef
 | Right Shift | Delete (Backspace) | Control (`⌃`) |
 | Left Control | — | Shift (`⇧`) |
 
-Caps Lock, Left Shift, and Right Shift use a 200 ms tap-alone timeout; holding one while pressing another key acts as its modifier without waiting 200 ms. Physical Tab, Right Control, and both physical Command keys remain unchanged. Tap Left Shift for Tab; hold Left Control and tap Left Shift for Shift+Tab. No Space or Enter remapping is configured.
+Caps Lock, Left Shift, and Right Shift use a 150 ms tap-alone timeout; holding one while pressing another key acts as its modifier without waiting 200 ms. Physical Tab, Right Control, and both physical Command keys remain unchanged. Tap Left Shift for Tab; hold Left Control and tap Left Shift for Shift+Tab. No Space or Enter remapping is configured.
 
 ### AeroSpace
 
