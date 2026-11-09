@@ -72,6 +72,15 @@ These shortcuts are configured in Homerow’s preferences. Physically, use **Lef
 
 Run `borders` to start it. After editing [`config/borders/bordersrc`](config/borders/bordersrc), run that file or restart `borders` to apply the appearance.
 
+### LazyVim
+
+| Shortcut | Action |
+| --- | --- |
+| `←/↓/↑/→` (Normal mode) | Focus the window in that direction |
+| `⌃H/J/K/L` (LazyVim default) | Focus the window in that direction |
+
+Karabiner converts **Right Control + H/J/K/L** into arrow keys before applications receive them. Mapping Normal-mode arrows to window focus lets that global navigation layer work naturally in LazyVim. Physical arrows behave the same way in Normal mode; arrows keep their standard cursor behavior in Insert and Command-line modes.
+
 ### Karabiner
 
 | Shortcut | Action |
