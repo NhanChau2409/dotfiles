@@ -38,7 +38,7 @@ After bootstrap, launch each GUI tool once and approve the macOS prompts it need
 1. Open **Karabiner-Elements** and complete its keyboard/driver permission setup.
 2. Open **Homerow** and enable it in **System Settings → Privacy & Security → Accessibility**.
 3. Open **AeroSpace** and enable launch at login after confirming its configuration works.
-4. Start JankyBorders with `borders`; its managed config draws a rounded 3 px purple border around the focused window.
+4. Start JankyBorders with `borders`; its managed config draws a rounded 5 px light-green glow around the focused window.
 
 JankyBorders startup remains explicit so its appearance can be verified before enabling it permanently. macOS permissions remain manual and are intentionally not automated by the bootstrap script.
 
@@ -60,6 +60,18 @@ Homerow is installed through the `homerow` Homebrew cask. It is free to try, wit
 
 These shortcuts are configured in Homerow’s preferences. Physically, use **Left Shift + Space** for `⌥Space`; use **Left Shift + Right Shift + Space** for `⌥⌃Space`. The current Karabiner profile turns held Left Shift into `⌥` and held Right Shift into `⌃`. Reapply these settings with [`scripts/configure-homerow.sh`](scripts/configure-homerow.sh).
 
+### JankyBorders
+
+| Setting | Value |
+| --- | --- |
+| Style | Rounded |
+| Width | 5 px |
+| Focused window | Light-green glow (`#b9f6ca`) |
+| Inactive windows | Transparent |
+| Rendering | HiDPI enabled |
+
+Run `borders` to start it. After editing [`config/borders/bordersrc`](config/borders/bordersrc), run that file or restart `borders` to apply the appearance.
+
 ### Karabiner
 
 | Shortcut | Action |
@@ -74,13 +86,14 @@ These shortcuts are configured in Homerow’s preferences. Physically, use **Lef
 | Right Shift | Delete (Backspace) | Control (`⌃`) |
 | Left Control | — | Control (`⌃`) |
 | Left Option | — | Control (`⌃`) |
+| Backtick (`` ` ``) | Backtick | Tab |
 | Tab | Tab | Shift (`⇧`) |
 
-Caps Lock, Left Shift, Right Shift, and Tab use a 150 ms tap-alone timeout. Tap Tab for Tab; hold Tab as Shift. The `⌘⌃V` clipboard shortcut is a trial binding and may need a delay if Spotlight does not open before `⌘4`; holding one while pressing another key acts as its modifier without waiting 200 ms. Physical Tab, Right Control, and both physical Command keys remain unchanged. Tap Left Shift for Tab; hold Left Control and tap Left Shift for Shift+Tab. No Space or Enter remapping is configured.
+Caps Lock, Left Shift, Right Shift, Backtick, and Tab use a 150 ms tap-alone timeout. Tap Backtick for `` ` `` or hold it alone for 150 ms to hold Tab; tap Tab for Tab or hold it as Shift. The `⌘⌃V` clipboard shortcut is a trial binding and may need a delay if Spotlight does not open before `⌘4`; holding one while pressing another key activates its hold behavior without waiting 150 ms. Physical Left Option emits Left Control immediately; Left Control, Right Control, and both physical Command keys remain unchanged. No Space or Enter remapping is configured.
 
 ### AeroSpace
 
-AeroSpace uses 8 px inner gaps and 8 px outer gaps, except for a 6 px bottom gap that preserves the bottom-edge fitting adjustment. Workspace `0` is reserved for the secondary monitor (falling back to the main monitor when only one is connected), so it cannot be moved with `⌥⌃Tab`. `⌥` is available by holding physical Left Shift; `⌃` is available from physical Left Option, Left Control, or Right Shift. These are all configured bindings in **main mode**:
+AeroSpace uses 4 px inner gaps and 2 px outer gaps. Workspace `0` is reserved for the secondary monitor (falling back to the main monitor when only one is connected), so it cannot be moved with `⌥⌃Tab`. `⌥` is available by holding physical Left Shift; `⌃` is available from physical Left Option, Left Control, or Right Shift. These are all configured bindings in **main mode**:
 
 | Category | Shortcut | Action |
 | --- | --- | --- |

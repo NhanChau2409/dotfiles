@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# Square, Retina-sharp focus indicator; inactive windows remain unobtrusive.
+# Rounded, Retina-sharp focus glow; inactive windows remain unobtrusive.
 options=(
   style=round
-  width=3.0
+  width=5.0
   hidpi=on
   "active_color=glow(0xffb9f6ca)"
   inactive_color=0x00000000
