@@ -22,6 +22,8 @@ Use bullets or headings only when they make longer or more complex content easie
 
 Explain complex topics top-down: core idea first, then architecture/details only if needed.
 
+When suggesting Bash commands for the user to run, copy each independently runnable command or command block to the macOS clipboard with `pbcopy`. Use one separate Bash tool invocation per clipboard copy—never batch multiple copies into one invocation—so each run appears as its own clipboard-history item.
+
 # Working Style
 
 Act directly on clear, safe, and limited requests, including reading, creating new files, small edits, and obvious fixes. Do not announce routine steps or ask unnecessary permission.
